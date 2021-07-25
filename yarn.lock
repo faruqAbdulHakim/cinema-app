@@ -3186,6 +3186,7 @@ resolve@^1.20.0:
     postcss: ^8.3.5
     react: ^17.0.2
     react-dom: ^17.0.2
+    tailwind-scrollbar-hide: ^1.0.3
     tailwindcss: ^2.2.4
   languageName: unknown
   linkType: soft
@@ -3594,6 +3595,13 @@ resolve@^1.20.0:
   dependencies:
     has-flag: ^4.0.0
   checksum: 0219f5c91753fea8dc8046cd4b18d39458b5dc0c6421c67c1072209faae9ba93b89283252e3b05d5c18901fd9f8b95001e3247fb93e2265f66d584a676522c75
+  languageName: node
+  linkType: hard
+
+"tailwind-scrollbar-hide@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "tailwind-scrollbar-hide@npm:1.0.3"
+  checksum: 369a8ee46d54230550aeafce103314c37cb99aa3b5dbfea134a6793894e098557627ea1e6f07becfb3f8373815cdf3d15cfabaa2a0d531d5df57c6477f920016
   languageName: node
   linkType: hard
 
