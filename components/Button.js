@@ -1,6 +1,6 @@
 export default function Button({ text, variant, onClick }) {
   const variants = {
-    'no-fill': 'hover:text-white active:text-[#cc5902]',
+    'no-fill': 'hover:text-white active:text-[#cc5902] hover:underline',
     fill: 'bg-[#ff7000] rounded-sm hover:bg-[#cc5902] text-white',
   };
   return (

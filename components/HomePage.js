@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Button from './Button';
 import Logo from './Logo';
 import { useRouter } from 'next/router';
