@@ -14,7 +14,7 @@ export default function HomePage() {
         <h1 className="font-bold text-xl sm:text-2xl">
           Unlimited movies, TV shows, and more
         </h1>
-        <p className="text-lg">Watch thousand of movies and TV shows now.</p>
+        <p className="text-lg">Find thousand of movies and TV shows now.</p>
         <Button text="Go to Cinema" variant="fill" onClick={goToCinema} />
       </main>
     </>

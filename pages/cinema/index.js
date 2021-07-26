@@ -11,7 +11,7 @@ export default function Cinema({ data }) {
   return (
     <>
       <Head>
-        <title>CINEMA | Stream TV and Movies Live and Online</title>
+        <title>CINEMA | Find TV Shows and Movies Live and Online</title>
       </Head>
       <Header />
       <Nav />
@@ -22,15 +22,15 @@ export default function Cinema({ data }) {
         variants={{
           pageInitial: {
             opacity: 0,
-            transition: {
-              duration: 1,
-            },
           },
           pageAnimate: {
             opacity: 1,
+            transition: {
+              duration: 0.5,
+            },
           },
         }}
-        className="grid sm:grid-cols-2 lg:grid-cols-3 2xl:flex flex-wrap justify-center"
+        className="sm:grid sm:grid-cols-2 lg:grid-cols-3 2xl:flex flex-wrap justify-center"
       >
         {data.map((el) => (
           <MovieItem key={el.id} movie={el} />

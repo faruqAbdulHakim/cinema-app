@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>CINEMA | Stream TV and Movies Live and Online</title>
+        <title>CINEMA | Find TV Shows and Movies Live and Online</title>
       </Head>
       <Header home />
       <HomePage />
