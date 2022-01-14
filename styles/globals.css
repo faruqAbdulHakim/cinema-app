@@ -2,8 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
+@layer components {
   body {
     @apply bg-[#030013] text-gray-300 min-h-screen;
   }
+}
+
+.bg-main {
+  background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url('/main.jpg');
+  background-position: center;
+  background-size: cover;
 }

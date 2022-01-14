@@ -1,14 +1,22 @@
-export default function Button({ text, variant, onClick }) {
-  const variants = {
-    'no-fill': 'hover:text-white active:text-[#cc5902] hover:underline',
-    fill: 'bg-[#ff7000] rounded-sm hover:bg-[#cc5902] text-white',
-  };
+const FillButton = ({ className, text, ...props }) => {
   return (
-    <div
-      className={`px-2 py-1 cursor-pointer ${variants[variant]}`}
-      onClick={onClick}
+    <button
+      className={`bg-primary-100 shadow-lg shadow-primary-100/50 hover:scale-105 active:scale-100 transition-all rounded-full min-h-[44px] min-w-[44px] px-4 py-2 ${
+        className || ''
+      }`}
+      {...props}
     >
       {text}
-    </div>
+    </button>
   );
-}
+};
+
+const TextButton = ({ className, text, ...props }) => {
+  return (
+    <button className={`hover:underline px-4 min-h-[44px] min-w-[44px] ${className || ''}`} {...props}>
+      {text}
+    </button>
+  );
+};
+
+export { FillButton, TextButton };

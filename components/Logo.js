@@ -1,3 +1,3 @@
 export default function Logo() {
-  return <div className="text-[#ff7000] text-4xl font-semibold">Cinema</div>;
+  return <div className="text-primary-100 text-3xl font-bold tracking-wide">Cinema</div>;
 }

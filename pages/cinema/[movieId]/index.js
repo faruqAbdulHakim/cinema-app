@@ -1,9 +1,11 @@
 import Head from 'next/head';
 import Header from '../../../components/Header';
 import Image from 'next/image';
+import API_ENDPOINT from '../../../constants/api-endpoint';
+import { useRouter } from 'next/router';
 
 export default function MovieDetailPage({ movie }) {
-  const BASE_URL = 'https://image.tmdb.org/t/p/w500';
+  const router = useRouter()
 
   return (
     <>
@@ -14,15 +16,17 @@ export default function MovieDetailPage({ movie }) {
       </Head>
       <Header />
       <div className="p-4 mt-8 sm:flex justify-center items-start space-x-4 space-y-4 sm:space-y-0 sm:space-x-10">
-        <div className="relative w-full h-96">
+        <div className="relative max-w-md w-full h-96 hover:scale-105 active:scale-100 transition-all cursor-pointer"
+          onClick={() => router.push(API_ENDPOINT.getMovieImage(movie.poster_path || movie.backdrop_path))}
+          >
           <Image
-            src={BASE_URL + (movie.poster_path || movie.backdrop_path)}
+            src={API_ENDPOINT.getMovieImage(movie.poster_path || movie.backdrop_path)}
             layout="fill"
             objectFit="contain"
             objectPosition="top"
           />
         </div>
-        <div className="flex flex-col space-y-4">
+        <div className="flex flex-col space-y-4 max-w-xl">
           <div>
             <h1 className="font-semibold text-xl sm:text-2xl md:text-3xl text-white">
               {movie.title || movie.original_title || movie.original_name}

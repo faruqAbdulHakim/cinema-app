@@ -1,4 +1,4 @@
-import Button from './Button';
+import {FillButton} from './Button';
 import Logo from './Logo';
 import { useRouter } from 'next/router';
 
@@ -15,7 +15,7 @@ export default function HomePage() {
           Unlimited movies, TV shows, and more
         </h1>
         <p className="text-lg">Find thousand of movies and TV shows now.</p>
-        <Button text="Go to Cinema" variant="fill" onClick={goToCinema} />
+        <FillButton text="Go to Cinema" onClick={goToCinema} />
       </main>
     </>
   );

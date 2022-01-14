@@ -1,20 +1,20 @@
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+import API_ENDPOINT from '../constants/api-endpoint';
 
 export default function MovieItem({ movie }) {
   const router = useRouter();
-  const BASE_URL = 'https://image.tmdb.org/t/p/w500';
 
   return (
     <div
-      className="group p-4 cursor-pointer hover:scale-105 transition-all"
+      className="group p-4 cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out hover:bg-slate-900"
       onClick={() => {
         router.replace(`/cinema/${movie.id}`);
       }}
     >
       <div className="relative w-full h-60">
         <Image
-          src={BASE_URL + movie.poster_path}
+          src={API_ENDPOINT.getMovieImage(movie.poster_path)}
           layout="fill"
           objectFit="cover"
           objectPosition="top"
